@@ -11,8 +11,9 @@ public class ChessServer
 	private Toolkit tk = Toolkit.getDefaultToolkit();
 	private static ChessServer server;
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
+		System.setProperty("java.rmi.server.hostname","192.168.1.6");
 		server = new ChessServer();
 		if(hostGames())
 		{
