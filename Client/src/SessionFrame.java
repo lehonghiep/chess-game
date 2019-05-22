@@ -1,4 +1,5 @@
 import constants.TextConstants;
+import res.GameFrame;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -13,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.rmi.RemoteException;
 
-public class SessionFrame extends JFrame {
+public class SessionFrame extends GameFrame {
     private static final long serialVersionUID = 1L; //necessary thing is necessary
     private Toolkit tk = Toolkit.getDefaultToolkit();
     private JPanel pan;
@@ -40,7 +41,7 @@ public class SessionFrame extends JFrame {
         //turn off resizability, set close operation, turn off decoration, and set title of window
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Online Game Sessions");
+        this.setTitle(TextConstants.ONLINE_ROOM);
 
         labLogo = new JLabel();
         labLogo.setSize(60, 90);
@@ -55,7 +56,7 @@ public class SessionFrame extends JFrame {
         hustIcon = new ImageIcon(dimg);
         labLogo.setIcon(hustIcon);
 
-        labInTro = new JLabel("<html><font color='red'>LTU13B - Group10</font></html>");
+        labInTro = new JLabel("<html><font color='red'>LTU13B - Group 10</font></html>");
         labInTro.setFont(new Font("Dialog", Font.BOLD, 34));
 
         game1 = new JLabel(TextConstants.ROOM_1);
@@ -88,9 +89,9 @@ public class SessionFrame extends JFrame {
         openClosedButton3.setBorderPainted(false);
         openClosedButton3.setContentAreaFilled(false);
 
-        game1JoinButton = new JButton(TextConstants.JOIN_ROOM);
-        game2JoinButton = new JButton(TextConstants.JOIN_ROOM);
-        game3JoinButton = new JButton(TextConstants.JOIN_ROOM);
+        game1JoinButton = new GameButton(TextConstants.JOIN_ROOM);
+        game2JoinButton = new GameButton(TextConstants.JOIN_ROOM);
+        game3JoinButton = new GameButton(TextConstants.JOIN_ROOM);
 
 
         game1JoinButton.addActionListener(new ButtonListener());
@@ -98,7 +99,7 @@ public class SessionFrame extends JFrame {
         game3JoinButton.addActionListener(new ButtonListener());
 
         //make pan have a GridBagLayout
-        pan = new JPanel();
+        pan = new BackgroundPanel();
         pan.setLayout(new GridBagLayout());
         //create variable c for constraints
         GridBagConstraints c = new GridBagConstraints();

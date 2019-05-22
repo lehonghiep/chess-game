@@ -1,4 +1,5 @@
 import constants.TextConstants;
+import res.GameFrame;
 
 import javax.swing.*;
 import java.awt.Dimension;
@@ -7,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class AddressFrame extends JFrame
+public class AddressFrame extends GameFrame
 {	
 	//declare components globally so they can be edited from any event handler
 	private static final long serialVersionUID = 1L; //once again this is needed
@@ -35,7 +36,7 @@ public class AddressFrame extends JFrame
 		this.setTitle(TextConstants.ENTER_IP_SERVER);
 		
 		//create panel 
-		pan = new JPanel();
+		pan = new BackgroundPanel();
 		
 		//Create components
 		
@@ -50,7 +51,7 @@ public class AddressFrame extends JFrame
 		tf.setToolTipText("Enter the IP address here with the format: " +
 						  "\"XXX.XXX.XXX.XXX\" where every x is a number");
 		//button
-		button = new JButton("Enter");
+		button = new GameButton("Enter");
 		button.setToolTipText("Press to confirm IP address entered and connect to Server");
 		ButtonListener butListener = new ButtonListener();
 		button.addActionListener(butListener);

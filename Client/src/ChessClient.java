@@ -1,5 +1,6 @@
 import constants.Session;
 import constants.TextConstants;
+import res.GameFrame;
 
 import javax.swing.*;
 
@@ -11,7 +12,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-public class ChessClient extends JFrame 
+public class ChessClient extends GameFrame
 {
 	private static final long serialVersionUID = 1L;// i need it for some reason
 	
@@ -41,7 +42,7 @@ public class ChessClient extends JFrame
 	public static JButton[][] buttonArray = new JButton[8][8]; 		//array that stores game buttons
 	private JLabel promptLab = new JLabel("Welcome to JavaChess!"); //label that prompts player
 	private static JLabel playerColorLab = new JLabel(""); 			//label that tells player what color they are
-	public static JButton quitBut = new JButton(TextConstants.QUIT);  			//quit button
+	public static JButton quitBut = new GameButton(TextConstants.QUIT);  			//quit button
 	
 	//Image icons for all different pieces - self explanatory
 	ImageIcon wpawn = new ImageIcon(getClass().getResource("res/wpawn.png"));
@@ -89,7 +90,7 @@ public class ChessClient extends JFrame
 		playerColorLab.setFont(new Font("Dialog", Font.BOLD, 15));
 		
 		// make pan have a GridBagLayout
-		pan = new JPanel();
+		pan = new BackgroundPanel();
 		pan.setLayout(new GridBagLayout());
 
 		// create variable c for constraints
@@ -117,11 +118,11 @@ public class ChessClient extends JFrame
 				buttonArray[i][j].addActionListener(new ButtonListener());
 				if ((i % 2 == 0 && j % 2 != 0) || (i % 2 != 0 && j % 2 == 0)) 
 				{
-					buttonArray[i][j].setBackground(Color.gray);
+					buttonArray[i][j].setBackground(new Color(139,69,19));
 				} 
 				else 
 				{
-					buttonArray[i][j].setBackground(Color.white);
+					buttonArray[i][j].setBackground(new Color(245,222,179));
 				}
 			}
 		}
@@ -655,8 +656,7 @@ public class ChessClient extends JFrame
 
 	public static int getOcFromGame(int i) throws RemoteException 
 	{
-		return sesh[i].getOccupancy();
-	}
+		return sesh[i].getOccupancy(); }
 
 	public static void exitGame() throws RemoteException, InterruptedException 
 	{

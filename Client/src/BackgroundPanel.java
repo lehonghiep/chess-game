@@ -6,10 +6,11 @@ public class BackgroundPanel extends JPanel {
 
     public BackgroundPanel() {
         super();
-        img = new ImageIcon("rest/wood.jpg").getImage();
+        img = new ImageIcon(getClass().getResource("res/wood.jpg")).getImage();
     }
 
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         g.drawImage(img, 0, 0, null);
     }
 }

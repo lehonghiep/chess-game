@@ -9,4 +9,5 @@ public interface TextConstants {
     String ENTER_IP_SERVER ="Enter IP Address of Server";
     String ENTER_IP_SERVER_AFTER_FAIL_CONNECT ="(Connection Failed) Enter IP Address of Server";
     String QUIT = "Quit game";
+    String ONLINE_ROOM = "Online Room";
 }
