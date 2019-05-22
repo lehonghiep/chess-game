@@ -1,3 +1,5 @@
+import constants.TextConstants;
+
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -30,7 +32,7 @@ public class AddressFrame extends JFrame
 		//turn off resizability, set close operation, turn off decoration, and set title of window
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setTitle("Enter IP Address of Server");
+		this.setTitle(TextConstants.ENTER_IP_SERVER);
 		
 		//create panel 
 		pan = new JPanel();
@@ -38,7 +40,7 @@ public class AddressFrame extends JFrame
 		//Create components
 		
 		//label
-		lab = new JLabel("Enter IP Address of Server");
+		lab = new JLabel(TextConstants.ENTER_IP_SERVER);
 		lab.setToolTipText("In the box below, please enter the IP address " + 
 						   "of the Server hosting the game. This should be in" +
 						   "format: \"XXX.XXX.XXX.XXX\" where every x is a number");

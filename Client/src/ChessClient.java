@@ -1,11 +1,10 @@
+import constants.Session;
+import constants.TextConstants;
+
 import javax.swing.*;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.Socket;
 import java.rmi.registry.Registry;
 import java.util.Objects;
 import java.rmi.NotBoundException;
@@ -45,19 +44,19 @@ public class ChessClient extends JFrame
 	public static JButton quitBut = new JButton("Quit");  			//quit button
 	
 	//Image icons for all different pieces - self explanatory
-	ImageIcon wpawn = new ImageIcon(getClass().getResource("wpawn.png"));
-	ImageIcon bpawn = new ImageIcon(getClass().getResource("bpawn.png"));
-	ImageIcon wbishop = new ImageIcon(getClass().getResource("wbishop.png"));
-	ImageIcon bbishop = new ImageIcon(getClass().getResource("bbishop.png"));
-	ImageIcon wrook = new ImageIcon(getClass().getResource("wrook.png"));
-	ImageIcon brook = new ImageIcon(getClass().getResource("brook.png"));
-	ImageIcon wqueen = new ImageIcon(getClass().getResource("wqueen.png"));
-	ImageIcon bqueen = new ImageIcon(getClass().getResource("bqueen.png"));
-	ImageIcon wking = new ImageIcon(getClass().getResource("wking.png"));
-	ImageIcon bking = new ImageIcon(getClass().getResource("bking.png"));
-	ImageIcon wknight = new ImageIcon(getClass().getResource("wknight.png"));
-	ImageIcon bknight = new ImageIcon(getClass().getResource("bknight.png"));
-	ImageIcon blank = new ImageIcon(getClass().getResource("blank.png"));
+	ImageIcon wpawn = new ImageIcon(getClass().getResource("res/wpawn.png"));
+	ImageIcon bpawn = new ImageIcon(getClass().getResource("res/bpawn.png"));
+	ImageIcon wbishop = new ImageIcon(getClass().getResource("res/wbishop.png"));
+	ImageIcon bbishop = new ImageIcon(getClass().getResource("res/bbishop.png"));
+	ImageIcon wrook = new ImageIcon(getClass().getResource("res/wrook.png"));
+	ImageIcon brook = new ImageIcon(getClass().getResource("res/brook.png"));
+	ImageIcon wqueen = new ImageIcon(getClass().getResource("res/wqueen.png"));
+	ImageIcon bqueen = new ImageIcon(getClass().getResource("res/bqueen.png"));
+	ImageIcon wking = new ImageIcon(getClass().getResource("res/wking.png"));
+	ImageIcon bking = new ImageIcon(getClass().getResource("res/bking.png"));
+	ImageIcon wknight = new ImageIcon(getClass().getResource("res/wknight.png"));
+	ImageIcon bknight = new ImageIcon(getClass().getResource("res/bknight.png"));
+	ImageIcon blank = new ImageIcon(getClass().getResource("res/blank.png"));
 
 	//create client and other needed frames
 	private static ChessClient client;
@@ -179,7 +178,7 @@ public class ChessClient extends JFrame
 			// show AddressFrame and get focus on text field
 			if (connectionFailed == true) 
 			{
-				addressFrame.lab.setText("(Connection Failed) Enter IP Address of Server");
+				addressFrame.lab.setText(TextConstants.ENTER_IP_SERVER_AFTER_FAIL_CONNECT);
 				addressFrame.setSize(400, 93);
 			}
 			addressFrame.setVisible(true);
@@ -203,15 +202,15 @@ public class ChessClient extends JFrame
 			{
 				// attempt to connect and bind reg1 to sesh1
 				reg[0] = LocateRegistry.getRegistry(serverIP, 8087);
-				sesh[0] = (GameSessionInterface) reg[0].lookup("Session1");
+				sesh[0] = (GameSessionInterface) reg[0].lookup(Session.SESSION_ONE);
 
 				// attempt to connect and bind reg2 to sesh2
 				reg[1] = LocateRegistry.getRegistry(serverIP, 8086);
-				sesh[1] = (GameSessionInterface) reg[1].lookup("Session2");
+				sesh[1] = (GameSessionInterface) reg[1].lookup(Session.SESSION_TWO);
 
 				// attempt to connect and bind reg3 to sesh3
 				reg[2] = LocateRegistry.getRegistry(serverIP, 8085);
-				sesh[2] = (GameSessionInterface) reg[2].lookup("Session3");
+				sesh[2] = (GameSessionInterface) reg[2].lookup(Session.SESSION_THREE);
 
 				// set connectionSucessful to true since at this point no
 				// exceptions were thrown
