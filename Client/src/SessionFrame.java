@@ -1,33 +1,34 @@
 import constants.TextConstants;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.Toolkit;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.rmi.RemoteException;
 
 public class SessionFrame extends JFrame {
     private static final long serialVersionUID = 1L; //necessary thing is necessary
     private Toolkit tk = Toolkit.getDefaultToolkit();
     private JPanel pan;
-    public JLabel lab;
+    public JLabel labLogo;
+    public JLabel labInTro;
     public JLabel game1, game2, game3, gameOc1, gameOc2, gameOc3;
     public static JButton game1JoinButton, game2JoinButton, game3JoinButton,
             openClosedButton1, openClosedButton2, openClosedButton3;
     ImageIcon openIcon = new ImageIcon(getClass().getResource("res/open.png"));
     ImageIcon closedIcon = new ImageIcon(getClass().getResource("res/closed.png"));
+    ImageIcon hustIcon;
 
     public SessionFrame() {
         //set size of window
-        this.setSize(700, 450);
+        this.setSize(700, 550);
 
         //use awt.Toolkit to get screensize and set xPos and yPos to the center of the screen
         Dimension dim = tk.getScreenSize();
@@ -41,15 +42,28 @@ public class SessionFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Online Game Sessions");
 
-        lab = new JLabel("Please Join A Game Session");
-        lab.setFont(new Font("Dialog", Font.BOLD, 17));
+        labLogo = new JLabel();
+        labLogo.setSize(60, 90);
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File("src/res/hust.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Image dimg = img.getScaledInstance(labLogo.getWidth(), labLogo.getHeight(),
+                Image.SCALE_SMOOTH);
+        hustIcon = new ImageIcon(dimg);
+        labLogo.setIcon(hustIcon);
+
+        labInTro = new JLabel("<html><font color='red'>LTU13B - Group10</font></html>");
+        labInTro.setFont(new Font("Dialog", Font.BOLD, 34));
 
         game1 = new JLabel(TextConstants.ROOM_1);
         game2 = new JLabel(TextConstants.ROOM_2);
         game3 = new JLabel(TextConstants.ROOM_3);
-        gameOc1 = new JLabel(TextConstants.CURRENT_PLAYERS+":0");
-        gameOc2 = new JLabel(TextConstants.CURRENT_PLAYERS+":0");
-        gameOc3 = new JLabel(TextConstants.CURRENT_PLAYERS+":0");
+        gameOc1 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
+        gameOc2 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
+        gameOc3 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
 
         game1.setFont(new Font("Dialog", Font.BOLD, 17));
         game2.setFont(new Font("Dialog", Font.BOLD, 17));
@@ -98,7 +112,10 @@ public class SessionFrame extends JFrame {
         c.gridx = 0;
         c.gridy = 0;
         c.ipady = 40;
-        pan.add(lab, c);
+        pan.add(labLogo, c);
+
+        c.gridx = 2;
+        pan.add(labInTro, c);
 
         c.gridwidth = 1;
         c.gridx = 1;
@@ -156,47 +173,47 @@ public class SessionFrame extends JFrame {
 
     public void refresh() throws RemoteException {
         if (ChessClient.getOcFromGame(0) == 0) {
-            gameOc1.setText(TextConstants.CURRENT_PLAYERS+":0");
+            gameOc1.setText(TextConstants.CURRENT_PLAYERS + ": 0");
             game1JoinButton.setEnabled(true);
             openClosedButton1.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(0) == 1) {
-            gameOc1.setText(TextConstants.CURRENT_PLAYERS+":1");
+            gameOc1.setText(TextConstants.CURRENT_PLAYERS + ": 1");
             game1JoinButton.setEnabled(true);
             openClosedButton1.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(0) == 2) {
-            gameOc1.setText(TextConstants.CURRENT_PLAYERS+":2");
+            gameOc1.setText(TextConstants.CURRENT_PLAYERS + ": 2");
             game1JoinButton.setEnabled(false);
             openClosedButton1.setIcon(closedIcon);
         }
         if (ChessClient.getOcFromGame(1) == 0) {
-            gameOc2.setText(TextConstants.CURRENT_PLAYERS+":0");
+            gameOc2.setText(TextConstants.CURRENT_PLAYERS + ": 0");
             game2JoinButton.setEnabled(true);
             openClosedButton2.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(1) == 1) {
-            gameOc2.setText(TextConstants.CURRENT_PLAYERS+":1");
+            gameOc2.setText(TextConstants.CURRENT_PLAYERS + ": 1");
             game2JoinButton.setEnabled(true);
             openClosedButton2.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(1) == 2) {
-            gameOc2.setText(TextConstants.CURRENT_PLAYERS+":2");
+            gameOc2.setText(TextConstants.CURRENT_PLAYERS + ": 2");
             game2JoinButton.setEnabled(false);
             openClosedButton2.setIcon(closedIcon);
         }
         if (ChessClient.getOcFromGame(2) == 0) {
-            gameOc3.setText(TextConstants.CURRENT_PLAYERS+":0");
+            gameOc3.setText(TextConstants.CURRENT_PLAYERS + ": 0");
             game3JoinButton.setEnabled(true);
             openClosedButton3.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(2) == 1) {
-            gameOc3.setText(TextConstants.CURRENT_PLAYERS+":1");
+            gameOc3.setText(TextConstants.CURRENT_PLAYERS + ": 1");
             game3JoinButton.setEnabled(true);
             openClosedButton3.setIcon(openIcon);
         }
         if (ChessClient.getOcFromGame(2) == 2) {
-            gameOc3.setText(TextConstants.CURRENT_PLAYERS+":2");
+            gameOc3.setText(TextConstants.CURRENT_PLAYERS + ": 2");
             game3JoinButton.setEnabled(false);
             openClosedButton3.setIcon(closedIcon);
         }

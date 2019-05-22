@@ -41,7 +41,7 @@ public class ChessClient extends JFrame
 	public static JButton[][] buttonArray = new JButton[8][8]; 		//array that stores game buttons
 	private JLabel promptLab = new JLabel("Welcome to JavaChess!"); //label that prompts player
 	private static JLabel playerColorLab = new JLabel(""); 			//label that tells player what color they are
-	public static JButton quitBut = new JButton("Quit");  			//quit button
+	public static JButton quitBut = new JButton(TextConstants.QUIT);  			//quit button
 	
 	//Image icons for all different pieces - self explanatory
 	ImageIcon wpawn = new ImageIcon(getClass().getResource("res/wpawn.png"));
@@ -265,7 +265,7 @@ public class ChessClient extends JFrame
 
 			if (gameSuccessfullyJoined == false) {
 				gameSessionSelected = -1;
-				sessionFrame.lab.setText("Failed to connect. Please select another session");
+				sessionFrame.labLogo.setText("Failed to connect. Please select another session");
 			}
 		} while (gameSuccessfullyJoined == false);
 
