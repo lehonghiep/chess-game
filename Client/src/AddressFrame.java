@@ -1,5 +1,4 @@
 import constants.TextConstants;
-import res.GameFrame;
 
 import javax.swing.*;
 import java.awt.Dimension;
@@ -41,7 +40,7 @@ public class AddressFrame extends GameFrame
 		//Create components
 		
 		//label
-		lab = new JLabel(TextConstants.ENTER_IP_SERVER);
+		lab = new GameLabel(TextConstants.ENTER_IP_SERVER);
 		lab.setToolTipText("In the box below, please enter the IP address " + 
 						   "of the Server hosting the game. This should be in" +
 						   "format: \"XXX.XXX.XXX.XXX\" where every x is a number");

@@ -1,5 +1,4 @@
 import constants.TextConstants;
-import res.GameFrame;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -59,12 +58,12 @@ public class SessionFrame extends GameFrame {
         labInTro = new JLabel("<html><font color='red'>LTU13B - Group 10</font></html>");
         labInTro.setFont(new Font("Dialog", Font.BOLD, 34));
 
-        game1 = new JLabel(TextConstants.ROOM_1);
-        game2 = new JLabel(TextConstants.ROOM_2);
-        game3 = new JLabel(TextConstants.ROOM_3);
-        gameOc1 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
-        gameOc2 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
-        gameOc3 = new JLabel(TextConstants.CURRENT_PLAYERS + ": 0");
+        game1 = new GameLabel(TextConstants.ROOM_1);
+        game2 = new GameLabel(TextConstants.ROOM_2);
+        game3 = new GameLabel(TextConstants.ROOM_3);
+        gameOc1 = new GameLabel(TextConstants.CURRENT_PLAYERS + ": 0");
+        gameOc2 = new GameLabel(TextConstants.CURRENT_PLAYERS + ": 0");
+        gameOc3 = new GameLabel(TextConstants.CURRENT_PLAYERS + ": 0");
 
         game1.setFont(new Font("Dialog", Font.BOLD, 17));
         game2.setFont(new Font("Dialog", Font.BOLD, 17));

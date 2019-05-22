@@ -1,6 +1,6 @@
+import constants.GameColor;
 import constants.Session;
 import constants.TextConstants;
-import res.GameFrame;
 
 import javax.swing.*;
 
@@ -40,8 +40,8 @@ public class ChessClient extends GameFrame
 	// create UI JFrame objects
 	private JPanel pan = new JPanel(); 								//panel that holds it all
 	public static JButton[][] buttonArray = new JButton[8][8]; 		//array that stores game buttons
-	private JLabel promptLab = new JLabel("Welcome to JavaChess!"); //label that prompts player
-	private static JLabel playerColorLab = new JLabel(""); 			//label that tells player what color they are
+	private JLabel promptLab = new GameLabel("Welcome to JavaChess!"); //label that prompts player
+	private static JLabel playerColorLab = new GameLabel(""); 			//label that tells player what color they are
 	public static JButton quitBut = new GameButton(TextConstants.QUIT);  			//quit button
 	
 	//Image icons for all different pieces - self explanatory
@@ -118,11 +118,11 @@ public class ChessClient extends GameFrame
 				buttonArray[i][j].addActionListener(new ButtonListener());
 				if ((i % 2 == 0 && j % 2 != 0) || (i % 2 != 0 && j % 2 == 0)) 
 				{
-					buttonArray[i][j].setBackground(new Color(139,69,19));
+					buttonArray[i][j].setBackground(GameColor.BROWN_CELL);
 				} 
 				else 
 				{
-					buttonArray[i][j].setBackground(new Color(245,222,179));
+					buttonArray[i][j].setBackground(GameColor.WHEAT_CELL);
 				}
 			}
 		}
