@@ -7,60 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc7bc22-35bc-47f9-bd46-0ee72c56709d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/constants/TextConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/GameLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/constants/GameColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/constants/GameImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChessClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/GameSessionInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/SessionFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/bbishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/bking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/bknight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/blank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/bpawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/bqueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/brook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wbishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wknight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wpawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wqueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/wrook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/AddressFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/AddressFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ButtonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/ButtonListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ChessClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/ChessClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/GameSessionInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/GameSessionInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/SessionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/SessionFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/bbishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/bbishop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/bking.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/bking.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/bknight.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/bknight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/blank.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/blank.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/bpawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/bpawn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/bqueen.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/bqueen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/brook.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/brook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/closed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/open.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wbishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wbishop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wking.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wking.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wknight.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wknight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wpawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wpawn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wqueen.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wqueen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/wrook.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/ltu13b/group10/client/res/wrook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChessClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChessClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/GameButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/GameButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/SessionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/SessionFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/res/GameFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/AddressFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/AddressFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/ChessClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChessClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/GameButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/SessionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/SessionFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/res/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/ChessServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ChessServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/GameSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/GameSession.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChessServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameSessionInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSessionInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,6 +54,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GameSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,43 +82,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameSessionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ChessServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1144">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/Server/GameSessionInterface.class">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="104">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameSession.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -148,8 +106,10 @@
       <find>rebin</find>
       <find>Nam</find>
       <find>Naming</find>
-      <find>bla</find>
       <find>main</find>
+      <find>bla</find>
+      <find>444</find>
+      <find>44</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,16 +119,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/GameSessionInterface.java" />
-        <option value="$PROJECT_DIR$/src/GameSession.java" />
         <option value="$PROJECT_DIR$/src/ChessServer.java" />
+        <option value="$PROJECT_DIR$/src/GameSession.java" />
+        <option value="$PROJECT_DIR$/src/Constants.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1357" />
-    <option name="y" value="-670" />
-    <option name="width" value="2578" />
-    <option name="height" value="1408" />
+    <option name="x" value="1356" />
+    <option name="y" value="-671" />
+    <option name="width" value="2579" />
+    <option name="height" value="1409" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -198,13 +159,6 @@
             <path>
               <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="Server_jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -217,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558493272662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558517796329" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -244,6 +198,10 @@
   </component>
   <component name="RunManager">
     <configuration name="ChessServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="SERVER_IP" value="192.168.100.11" />
+        <env name="RMI_PORT" value="4445" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="ChessServer" />
       <module name="Server" />
       <method v="2">
@@ -279,12 +237,12 @@
       <workItem from="1558351737780" duration="698000" />
       <workItem from="1558355830157" duration="12219000" />
       <workItem from="1558420791549" duration="1833000" />
-      <workItem from="1558489892276" duration="1351000" />
+      <workItem from="1558489892276" duration="3990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39669000" />
+    <option name="totallyTimeSpent" value="42308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1359" y="-668" width="2062" height="1126" extended-state="6" />
@@ -299,7 +257,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2554068" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2554068" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34191555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,10 +334,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameSessionInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -390,20 +348,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameSession.java">
+    <entry file="file://$PROJECT_DIR$/src/ChessServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="416">
+          <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChessServer.java">
+    <entry file="file://$PROJECT_DIR$/src/GameSessionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1144">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="104">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

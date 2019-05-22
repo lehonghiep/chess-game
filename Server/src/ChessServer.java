@@ -9,8 +9,6 @@ public class ChessServer {
 
     private Toolkit tk = Toolkit.getDefaultToolkit();
     private static ChessServer server;
-    public static int SERVER_PORT = 4445;
-    private static String serverHost="";
 
     public static void main(String[] args) {
         server = new ChessServer();
@@ -55,7 +53,7 @@ public class ChessServer {
         boolean success = false;
         try {
 
-            System.setProperty("java.rmi.server.hostname", "192.168.9.129");
+            System.setProperty("java.rmi.server.hostname", System.getenv(Constants.SERVER_IP));
             //create GameSession objects to host
             GameSession sesh1 = new GameSession();
             GameSession sesh2 = new GameSession();
