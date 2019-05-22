@@ -78,11 +78,11 @@ public class ChessServer {
             System.out.println("registry3 created at port: "+registryPort3);
 
             //Bind each Session with a registry and give it a name
-            registry1.rebind("Session1", sesh1);
+            registry1.rebind(Constants.SESSION_ONE, sesh1);
             System.out.println("Sesh1 up and running");
-            registry2.rebind("Session2", sesh2);
+            registry2.rebind(Constants.SESSION_TWO, sesh2);
             System.out.println("Sesh2 up and running");
-            registry3.rebind("Session3", sesh3);
+            registry3.rebind(Constants.SESSION_THREE, sesh3);
             System.out.println("Sesh3 up and running");
 
             /*os.writeBytes("ok" + "\n");

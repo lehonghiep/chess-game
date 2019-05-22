@@ -442,7 +442,7 @@ public class ChessClient extends GameFrame
 			for (int j = 0; j <= 7; j++) 
 			{
 				// check server for piece
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "Pawn")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.PAWN)) 
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -456,7 +456,7 @@ public class ChessClient extends GameFrame
 					}
 
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "Rook")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.ROOK))
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -470,7 +470,7 @@ public class ChessClient extends GameFrame
 
 					}
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "Knight")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.KNIGHT)) 
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -483,7 +483,7 @@ public class ChessClient extends GameFrame
 						buttonArray[i][j].setDisabledIcon(bknight);
 					}
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "Bishop")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BISHOP)) 
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -496,7 +496,7 @@ public class ChessClient extends GameFrame
 						buttonArray[i][j].setDisabledIcon(bbishop);
 					}
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "Queen")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.QUEEN)) 
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -509,7 +509,7 @@ public class ChessClient extends GameFrame
 						buttonArray[i][j].setDisabledIcon(bqueen);
 					}
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "King")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.KING)) 
 				{
 					if (sesh[gameSessionSelected].getColorAt(i, j) == 1) 
 					{
@@ -522,7 +522,7 @@ public class ChessClient extends GameFrame
 						buttonArray[i][j].setDisabledIcon(bking);
 					}
 				}
-				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece")) 
+				if (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE)) 
 				{
 					buttonArray[i][j].setIcon(blank);
 					buttonArray[i][j].setDisabledIcon(blank);
@@ -558,13 +558,13 @@ public class ChessClient extends GameFrame
 			{
 				if(!(j == 0) && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Pawn"))
 				{
-					if(j == 6 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 1)), "BlankPiece") 
-							  && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 2)), "BlankPiece"))
+					if(j == 6 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 1)), TextConstants.BLANK_PIECE) 
+							  && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 2)), TextConstants.BLANK_PIECE))
 					{
 						buttonArray[i][(j - 2)].setEnabled(true);
 						moves++;
 					}
-					if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 1)), "BlankPiece"))
+					if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j - 1)), TextConstants.BLANK_PIECE))
 					{
 						buttonArray[i][(j - 1)].setEnabled(true);
 						moves++;
@@ -583,15 +583,15 @@ public class ChessClient extends GameFrame
 			}
 			else if(playerColor == 2)
 			{
-				if(!(j == 7) && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Pawn"))
+				if(!(j == 7) && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.PAWN))
 				{
-					if(j == 1 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 1)), "BlankPiece") 
-							  && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 2)), "BlankPiece"))
+					if(j == 1 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 1)), TextConstants.BLANK_PIECE) 
+							  && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 2)), TextConstants.BLANK_PIECE))
 					{
 						buttonArray[i][(j + 2)].setEnabled(true);
 						moves++;
 					}
-					if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 1)), "BlankPiece"))
+					if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, (j + 1)), TextConstants.BLANK_PIECE))
 					{
 						buttonArray[i][(j + 1)].setEnabled(true);
 						moves++;
@@ -610,25 +610,25 @@ public class ChessClient extends GameFrame
 			}
 			
 			//ROOK
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Rook"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.ROOK))
 			{
 				rookEnable(i, j);
 			}
 			
 			//BISHOP
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Bishop"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.BISHOP))
 			{
 				bishopEnable(i,j);
 			}
 			
 			//KNIGHT
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Knight"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.KNIGHT))
 			{
 				knightEnable(i, j);
 			}
 	
 			//QUEEN
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "Queen"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.QUEEN))
 			{
 				rookEnable(i, j);
 				i = selectionX;
@@ -636,7 +636,7 @@ public class ChessClient extends GameFrame
 				bishopEnable(i, j);	
 			}
 			
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), "King"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(selectionX, selectionY), TextConstants.KING))
 			{
 				kingEnable(i, j);
 			}
@@ -715,7 +715,7 @@ public class ChessClient extends GameFrame
 	{
 		//RIGHT
 		i++;
-		while(i <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+		while(i <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -731,7 +731,7 @@ public class ChessClient extends GameFrame
 		
 		//LEFT
 		i--;
-		while(i >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+		while(i >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -747,7 +747,7 @@ public class ChessClient extends GameFrame
 		
 		//DOWN
 		j++;
-		while(j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+		while(j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -763,7 +763,7 @@ public class ChessClient extends GameFrame
 		
 		//UP
 		j--;
-		while(j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+		while(j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -783,9 +783,9 @@ public class ChessClient extends GameFrame
 		//SouthEast
 		i++;
 		j++;
-		while(i <= 7 && j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+		while(i <= 7 && j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 		{
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 			{
 				buttonArray[i][j].setEnabled(true);
 				moves++;
@@ -804,9 +804,9 @@ public class ChessClient extends GameFrame
 		//NorthWest
 		i--;
 		j--;
-		while(i >= 0 && j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), "BlankPiece"))
+		while(i >= 0 && j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), TextConstants.BLANK_PIECE))
 		{
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 			{
 				buttonArray[i][j].setEnabled(true);
 				moves++;
@@ -825,9 +825,9 @@ public class ChessClient extends GameFrame
 		//SouthWest
 		i--;
 		j++;
-		while(i >= 0 && j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), "BlankPiece"))
+		while(i >= 0 && j <= 7 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), TextConstants.BLANK_PIECE))
 		{
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 			{
 				buttonArray[i][j].setEnabled(true);
 				moves++;
@@ -846,9 +846,9 @@ public class ChessClient extends GameFrame
 		//NorthEast
 		i++;
 		j--;
-		while(i <= 7 && j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), "BlankPiece"))
+		while(i <= 7 && j >= 0 && Objects.equals(sesh[gameSessionSelected].getPieceTypeAt((i), (j)), TextConstants.BLANK_PIECE))
 		{
-			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece"))
+			if(Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE))
 			{
 				buttonArray[i][j].setEnabled(true);
 				moves++;
@@ -869,7 +869,7 @@ public class ChessClient extends GameFrame
 		//check right bottom
 		i = selectionX + 2;
 		j = selectionY + 1;
-		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -878,7 +878,7 @@ public class ChessClient extends GameFrame
 		//check left top
 		i = selectionX - 2;
 		j = selectionY - 1;
-		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -887,7 +887,7 @@ public class ChessClient extends GameFrame
 		//check left bottom
 		i = selectionX - 2;
 		j = selectionY + 1;
-		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -896,7 +896,7 @@ public class ChessClient extends GameFrame
 		//check right top
 		i = selectionX + 2;
 		j = selectionY - 1;
-		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -905,7 +905,7 @@ public class ChessClient extends GameFrame
 		//check right bottom again 
 		i = selectionX + 1;
 		j = selectionY + 2;
-		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -914,7 +914,7 @@ public class ChessClient extends GameFrame
 		//check left top again
 		i = selectionX - 1;
 		j = selectionY - 2;
-		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -923,7 +923,7 @@ public class ChessClient extends GameFrame
 		//check left bottom again
 		i = selectionX - 1;
 		j = selectionY + 2;
-		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -932,7 +932,7 @@ public class ChessClient extends GameFrame
 		//check right top again
 		i = selectionX + 1;
 		j = selectionY - 2;
-		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -943,7 +943,7 @@ public class ChessClient extends GameFrame
 	{
 		i = selectionX + 1;
 		j = selectionY;
-		if(i <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -951,7 +951,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX;
 		j = selectionY + 1;
-		if(j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -959,7 +959,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX - 1;
 		j = selectionY;
-		if(i >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -967,7 +967,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX;
 		j = selectionY - 1;
-		if(j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -975,7 +975,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX + 1;
 		j = selectionY + 1;
-		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -983,7 +983,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX + 1;
 		j = selectionY - 1;
-		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i <= 7 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -991,7 +991,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX - 1;
 		j = selectionY + 1;
-		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j <= 7 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
@@ -999,7 +999,7 @@ public class ChessClient extends GameFrame
 		
 		i = selectionX - 1;
 		j = selectionY - 1;
-		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), "BlankPiece") || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
+		if(i >= 0 && j >= 0 && (Objects.equals(sesh[gameSessionSelected].getPieceTypeAt(i, j), TextConstants.BLANK_PIECE) || sesh[gameSessionSelected].getColorAt(i, j) != playerColor))
 		{
 			buttonArray[i][j].setEnabled(true);
 			moves++;
