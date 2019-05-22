@@ -1,12 +1,5 @@
 import java.awt.GridBagConstraints;
 import java.awt.Toolkit;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.UnknownHostException;
 import java.rmi.registry.*;
 
 
@@ -20,8 +13,6 @@ public class ChessServer {
     private static String serverHost="";
 
     public static void main(String[] args) {
-//		System.setProperty("java.rmi.server.hostname","192.168.9.129");
-//		System.out.println("hostname:192.168.9.129");
         server = new ChessServer();
         if (hostGames()) {
             System.out.println("...Hosting successful!");
@@ -63,20 +54,6 @@ public class ChessServer {
     public static boolean hostGames() {
         boolean success = false;
         try {
-            /*ServerSocket s = new ServerSocket(SERVER_PORT);
-            System.out.println("Starting server at " + SERVER_PORT);
-            Socket clientSocket = s.accept();
-            System.out.println("Connection success at host " + s.getInetAddress().getHostAddress() + ":" + clientSocket.getLocalPort());
-
-            BufferedReader is = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            DataOutputStream os = new DataOutputStream(clientSocket.getOutputStream());
-            // auth = host:password
-//                String auth = reader.readLine();
-//                os.writeBytes("connection to server success");
-            serverHost = is.readLine();
-            System.out.println("Server host: " + serverHost);
-
-            System.setProperty("java.rmi.server.hostname", serverHost);*/
 
             System.setProperty("java.rmi.server.hostname", "192.168.9.129");
             //create GameSession objects to host

@@ -10,12 +10,13 @@ public class GameSession extends UnicastRemoteObject implements GameSessionInter
 	
 	public GameSession() throws RemoteException 
 	{
-
+		super(4445);
 	}
 	
 	@Override
 	public int getOccupancy() throws RemoteException
 	{
+		System.out.println("bla bla");
 		return playersInGame;
 	}
 	
