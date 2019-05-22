@@ -8,15 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3dc7bc22-35bc-47f9-bd46-0ee72c56709d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/AddressFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/SessionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/SessionFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/AddressFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/AddressFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/SessionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/SessionFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/ChessServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ChessServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/GameSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/GameSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChessServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +66,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ChessServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+            <state relative-caret-position="-1715">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -118,17 +124,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/GameSessionInterface.java" />
-        <option value="$PROJECT_DIR$/src/ChessServer.java" />
         <option value="$PROJECT_DIR$/src/GameSession.java" />
         <option value="$PROJECT_DIR$/src/Constants.java" />
+        <option value="$PROJECT_DIR$/src/ChessServer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1356" />
-    <option name="y" value="-671" />
-    <option name="width" value="2579" />
-    <option name="height" value="1409" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -177,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558520967114" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558522292056" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -207,6 +213,9 @@
       <envs>
         <env name="SERVER_IP" value="192.168.100.11" />
         <env name="RMI_PORT" value="4445" />
+        <env name="REGISTRY_PORT_1" value="8087" />
+        <env name="REGISTRY_PORT_2" value="8086" />
+        <env name="REGISTRY_PORT_3" value="8085" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="ChessServer" />
       <module name="Server" />
@@ -243,17 +252,18 @@
       <workItem from="1558351737780" duration="698000" />
       <workItem from="1558355830157" duration="12219000" />
       <workItem from="1558420791549" duration="1833000" />
-      <workItem from="1558489892276" duration="5583000" />
+      <workItem from="1558489892276" duration="7023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43901000" />
+    <option name="totallyTimeSpent" value="45341000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1359" y="-668" width="2062" height="1126" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.104395606" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1580938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -262,7 +272,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45726055" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2670068" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34191555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Server/GameSessionInterface.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -370,10 +373,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ChessServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+        <state relative-caret-position="-1715">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

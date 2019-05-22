@@ -10,6 +10,10 @@ public class ChessServer {
     private Toolkit tk = Toolkit.getDefaultToolkit();
     private static ChessServer server;
 
+    private static int registryPort1= Integer.parseInt(System.getenv(Constants.REGISTRY_PORT_1));
+    private static int registryPort2= Integer.parseInt(System.getenv(Constants.REGISTRY_PORT_2));
+    private static int registryPort3= Integer.parseInt(System.getenv(Constants.REGISTRY_PORT_3));
+
     public static void main(String[] args) {
         server = new ChessServer();
         if (hostGames()) {
@@ -66,12 +70,12 @@ public class ChessServer {
             //registry = LocateRegistry.getRegistry();
 
             //Start up the registries
-            registry1 = LocateRegistry.createRegistry(8087);
-            System.out.println("registry1 created at port 8087");
-            registry2 = LocateRegistry.createRegistry(8086);
-            System.out.println("registry2 created at port 8086");
-            registry3 = LocateRegistry.createRegistry(8085);
-            System.out.println("registry3 created at port 8085");
+            registry1 = LocateRegistry.createRegistry(registryPort1);
+            System.out.println("registry1 created at port: "+registryPort1);
+            registry2 = LocateRegistry.createRegistry(registryPort2);
+            System.out.println("registry2 created at port: "+registryPort2);
+            registry3 = LocateRegistry.createRegistry(registryPort3);
+            System.out.println("registry3 created at port: "+registryPort3);
 
             //Bind each Session with a registry and give it a name
             registry1.rebind("Session1", sesh1);
