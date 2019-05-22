@@ -1,96 +1,123 @@
 import java.awt.GridBagConstraints;
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
 import java.rmi.registry.*;
 
 
-public class ChessServer
-{
-	
-	private static final long serialVersionUID = 1L;
-	
-	private Toolkit tk = Toolkit.getDefaultToolkit();
-	private static ChessServer server;
-	
-	public static void main(String[] args)
-	{
-		System.setProperty("java.rmi.server.hostname","192.168.1.6");
-		server = new ChessServer();
-		if(hostGames())
-		{
-			System.out.println("...Hosting successful!");
-		}
-		else
-		{
-			System.out.println("...Hosting Failed!");
-		}
-	}
-	public ChessServer()
-	{
-		System.out.println("JavaChess Server");
+public class ChessServer {
 
-		GridBagConstraints c = new GridBagConstraints();
+    private static final long serialVersionUID = 1L;
 
-		System.out.println("Server starting up");
+    private Toolkit tk = Toolkit.getDefaultToolkit();
+    private static ChessServer server;
+    public static int SERVER_PORT = 4445;
+    private static String serverHost="";
+
+    public static void main(String[] args) {
+//		System.setProperty("java.rmi.server.hostname","192.168.9.129");
+//		System.out.println("hostname:192.168.9.129");
+        server = new ChessServer();
+        if (hostGames()) {
+            System.out.println("...Hosting successful!");
+        } else {
+            System.out.println("...Hosting Failed!");
+        }
+    }
+
+    public ChessServer() {
+        System.out.println("JavaChess Server");
+
+        GridBagConstraints c = new GridBagConstraints();
+
+        System.out.println("Server starting up");
 
 
-		
-		c.fill = GridBagConstraints.HORIZONTAL;
-		c.weightx = 0.5;
-		c.gridwidth = 3;
-		c.gridx = 0;
-		c.gridy = 0;
-		c.ipady = 15;
-		
-		c.gridx = 0;
-		c.gridy = 1;
-		
-		c.gridx = 0;
-		c.gridy = 2;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 0.5;
+        c.gridwidth = 3;
+        c.gridx = 0;
+        c.gridy = 0;
+        c.ipady = 15;
 
-		
-		c.gridx = 0;
-		c.gridy = 3;
-		
-		c.gridx = 0;
-		c.gridy = 4;
+        c.gridx = 0;
+        c.gridy = 1;
 
-	}
-	public static boolean hostGames()
-	{
-		boolean success = false;
-		try {
-			//create GameSession objects to host
-			GameSession sesh1 = new GameSession();
-			GameSession sesh2 = new GameSession();
-			GameSession sesh3 = new GameSession();
-			
-			//Create 3 registry objects for each session
-			Registry registry1;
-			Registry registry2;
-			Registry registry3;
-			//registry = LocateRegistry.getRegistry();
+        c.gridx = 0;
+        c.gridy = 2;
 
-			//Start up the registries 
-			registry1 = LocateRegistry.createRegistry(8087);
-			System.out.println("registry1 created at port 8087");
-			registry2 = LocateRegistry.createRegistry(8086);
-			System.out.println("registry2 created at port 8086");
-			registry3 = LocateRegistry.createRegistry(8085);
-			System.out.println("registry3 created at port 8085");
 
-			//Bind each Session with a registry and give it a name
-			registry1.rebind("Session1", sesh1);
-			System.out.println("Sesh1 up and running");
-			registry2.rebind("Session2", sesh2);
-			System.out.println("Sesh2 up and running");
-			registry3.rebind("Session3", sesh3);
-			System.out.println("Sesh3 up and running");
-			success = true;
-		}
-		catch (Exception e) 
-		{
-			e.printStackTrace();
-		}
-		return success;
-	}
+        c.gridx = 0;
+        c.gridy = 3;
+
+        c.gridx = 0;
+        c.gridy = 4;
+
+    }
+
+    public static boolean hostGames() {
+        boolean success = false;
+        try {
+            /*ServerSocket s = new ServerSocket(SERVER_PORT);
+            System.out.println("Starting server at " + SERVER_PORT);
+            Socket clientSocket = s.accept();
+            System.out.println("Connection success at host " + s.getInetAddress().getHostAddress() + ":" + clientSocket.getLocalPort());
+
+            BufferedReader is = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            DataOutputStream os = new DataOutputStream(clientSocket.getOutputStream());
+            // auth = host:password
+//                String auth = reader.readLine();
+//                os.writeBytes("connection to server success");
+            serverHost = is.readLine();
+            System.out.println("Server host: " + serverHost);
+
+            System.setProperty("java.rmi.server.hostname", serverHost);*/
+
+            System.setProperty("java.rmi.server.hostname", "192.168.9.129");
+            //create GameSession objects to host
+            GameSession sesh1 = new GameSession();
+            GameSession sesh2 = new GameSession();
+            GameSession sesh3 = new GameSession();
+
+            //Create 3 registry objects for each session
+            Registry registry1;
+            Registry registry2;
+            Registry registry3;
+            //registry = LocateRegistry.getRegistry();
+
+            //Start up the registries
+            registry1 = LocateRegistry.createRegistry(8087);
+            System.out.println("registry1 created at port 8087");
+            registry2 = LocateRegistry.createRegistry(8086);
+            System.out.println("registry2 created at port 8086");
+            registry3 = LocateRegistry.createRegistry(8085);
+            System.out.println("registry3 created at port 8085");
+
+            //Bind each Session with a registry and give it a name
+            registry1.rebind("Session1", sesh1);
+            System.out.println("Sesh1 up and running");
+            registry2.rebind("Session2", sesh2);
+            System.out.println("Sesh2 up and running");
+            registry3.rebind("Session3", sesh3);
+            System.out.println("Sesh3 up and running");
+
+            /*os.writeBytes("ok" + "\n");
+            is.close();
+            os.close();
+
+            String clientHost = clientSocket.getInetAddress().getHostAddress();
+            System.out.println(clientHost);*/
+
+
+            success = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return success;
+    }
 }
