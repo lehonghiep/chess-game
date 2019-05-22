@@ -24,7 +24,7 @@ public class SessionFrame extends GameFrame {
             openClosedButton1, openClosedButton2, openClosedButton3;
     ImageIcon openIcon = new ImageIcon(getClass().getResource("res/open.png"));
     ImageIcon closedIcon = new ImageIcon(getClass().getResource("res/closed.png"));
-    ImageIcon hustIcon;
+    ImageIcon hustIcon=new ImageIcon(getClass().getResource("res/hust.png"));
 
     public SessionFrame() {
         //set size of window
@@ -43,16 +43,10 @@ public class SessionFrame extends GameFrame {
         this.setTitle(TextConstants.ONLINE_ROOM);
 
         labLogo = new JLabel();
-        labLogo.setSize(60, 90);
-        BufferedImage img = null;
-        try {
-            img = ImageIO.read(new File("src/res/hust.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Image dimg = img.getScaledInstance(labLogo.getWidth(), labLogo.getHeight(),
-                Image.SCALE_SMOOTH);
-        hustIcon = new ImageIcon(dimg);
+
+        Image image=hustIcon.getImage();
+        Image newimg = image.getScaledInstance(60, 90,  java.awt.Image.SCALE_SMOOTH);
+        hustIcon = new ImageIcon(newimg);
         labLogo.setIcon(hustIcon);
 
         labInTro = new JLabel("<html><font color='red'>LTU13B - Group 10</font></html>");

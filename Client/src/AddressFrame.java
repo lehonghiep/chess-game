@@ -19,7 +19,7 @@ public class AddressFrame extends GameFrame
 	public AddressFrame()
 	{
 		//set size of window
-		this.setSize(400,65);
+		this.setSize(400,100);
 		
 		//use awt.Toolkit to get screensize and set xPos and yPos to the center of the screen
 		Toolkit tk = Toolkit.getDefaultToolkit();
