@@ -1,6 +1,11 @@
 import javax.swing.*;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
 import java.rmi.registry.Registry;
 import java.util.Objects;
 import java.rmi.NotBoundException;
@@ -223,6 +228,8 @@ public class ChessClient extends JFrame
 				connectionFailed = true; // set connectionFailed to true if any
 											// exceptions are thrown
 				ipEntered = false;
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 
 		} while (connectionFailed);
